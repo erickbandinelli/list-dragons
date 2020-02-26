@@ -23,7 +23,7 @@
 -   Executar no terminal "yarn install"
 -   Executar no terminal "yarn dev"
 
-## FRON-TEND - React, Redux e Redux-Saga
+## FRONT-END - React, Redux e Redux-Saga
 
 -   Executar no terminal "cd ./frontend"
 -   Executar no terminal "yarn install"
