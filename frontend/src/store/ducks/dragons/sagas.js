@@ -5,8 +5,8 @@ import { loadSuccces, loadFailure } from './actions';
 
 export function* load() {
 	try {
-		const response = yield call(api.get, '/films');
-		yield put(loadSuccces(response.data.results));
+		const response = yield call(api.get, 'dragon');
+		yield put(loadSuccces(response.data));
 	} catch (err) {
 		yield put(loadFailure());
 	}

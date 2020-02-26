@@ -1,9 +1,7 @@
 import { combineReducers } from 'redux';
 
-import Movies from './movies';
-import Details from './details';
+import Dragons from './dragons';
 
 export default combineReducers({
-	Movies,
-	Details
+	Dragons
 })

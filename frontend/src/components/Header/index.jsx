@@ -1,20 +1,14 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import HeaderStyle from './style';
 
-const Header: React.FC = () => {
+const Header = () => {
 	return (
 		<HeaderStyle>
-			<Container>
-				<Row>
-					<div className="logo">
-						<a href="/">
-							<h1>SWFlix</h1>
-						</a>
-					</div>
-				</Row>
-			</Container>
+				<div className="logo">
+					<a href="/">
+						<h1>Dragons</h1>
+					</a>
+				</div>
 		</HeaderStyle>
 	);
 };
