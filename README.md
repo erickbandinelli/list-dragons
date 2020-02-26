@@ -18,7 +18,7 @@
 -   Instale o [MongoDB](https://www.mongodb.com/)
 -   Instale o [Robo 3T (formerly Robomongo)](https://robomongo.org/download) para facilitar a visualização do banco de dados
 -   crie um database chamado [nodeapi]()
--   crie tabelas chamadas [users]()
+-   crie uma collection chamada [users]()
 -   Executar no terminal "cd ./backend"
 -   Executar no terminal "yarn install"
 -   Executar no terminal "yarn dev"
