@@ -13,7 +13,7 @@
 -   [Express](https://expressjs.com/pt-br/) Obs: ler documentação
 -   [MongoDB](https://www.mongodb.com/) Obs: ler documentação
 
-## BACKEND - NODEJS MONGODB
+## BACK-END - NodeJS MongoDB
 
 -   Instale o [MongoDB](https://www.mongodb.com/)
 -   Instale o [Robo 3T (formerly Robomongo)](https://robomongo.org/download) para facilitar a visualização do banco de dados
@@ -23,7 +23,7 @@
 -   Executar no terminal "yarn install"
 -   Executar no terminal "yarn dev"
 
-## FRONTEND - REACT, REDUX E REDUX-SAGA
+## FRON-TEND - React, Redux e Redux-Saga
 
 -   Executar no terminal "cd ./frontend"
 -   Executar no terminal "yarn install"
