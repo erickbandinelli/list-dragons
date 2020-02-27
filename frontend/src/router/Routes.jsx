@@ -7,6 +7,7 @@ import PublicRoute from "./PublicRoute";
 
 import Home from "../pages/Home";
 import Dragons from "../pages/Dragons";
+import DragonsDetails from "../pages/DragonsDatails";
 
 const TOKEN_KEY = "jwt";
 var seg = 0;
@@ -35,7 +36,7 @@ export function Routes() {
       <Switch>
         <PublicRoute restricted={true} exact path="/" component={Home} />
         <PrivateRoute exact path="/list-dragons" component={Dragons} />
-        {/* <Route exact path="/details/:id" component={Details} /> */}
+        <PrivateRoute exact path="/details-dragons/:id" component={DragonsDetails} />
         {/* <Route path="*" component={NotFoundPage} /> */}
       </Switch>
     </Router>

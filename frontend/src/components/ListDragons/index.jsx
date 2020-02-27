@@ -34,8 +34,6 @@ const ListDragons = () => {
 	const dragonsState = useSelector(
 		(state) => state.Dragons.data
 	);
-
-	console.log(dragonsState);
 	
 	const newListDragons = dragonsState.sort(function (a, b) {
 		var nameA = a.name, nameB = b.name
