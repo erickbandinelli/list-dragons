@@ -1,15 +1,40 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
 import history from "./history";
 
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
+
 import Home from "../pages/Home";
-// import Details from "../pages/Details";
+import Dragons from "../pages/Dragons";
+
+const TOKEN_KEY = "jwt";
+var seg = 0;
 
 export function Routes() {
+  useEffect(() => {
+    if (localStorage.getItem(TOKEN_KEY)) {
+      document.addEventListener("mousemove", function () {
+          /*Caso seja detectado o movimento do mouse, atualizar a variável
+            que representa o tempo de inatividade para 0 segundos*/
+          seg = 0;
+      });
+
+      setInterval(function () {
+          seg = seg + 1;
+          if (seg === 14400) {
+            localStorage.removeItem(TOKEN_KEY);
+            window.location.href = "/";
+          }
+      }, 1000);
+    }
+  }, [])
+
   return (
     <Router history={history}>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <PublicRoute restricted={true} exact path="/" component={Home} />
+        <PrivateRoute exact path="/list-dragons" component={Dragons} />
         {/* <Route exact path="/details/:id" component={Details} /> */}
         {/* <Route path="*" component={NotFoundPage} /> */}
       </Switch>

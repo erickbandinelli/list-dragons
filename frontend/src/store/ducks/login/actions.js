@@ -1,6 +1,7 @@
-export const loadRequest = () => {
+export const loadRequest = (email, password) => {
 	return {
-		type: "LOAD_REQUEST"
+		type: "LOAD_REQUEST",
+		payload: { email, password }
 	}
 }
 

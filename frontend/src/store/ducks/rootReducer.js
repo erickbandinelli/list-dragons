@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import Dragons from './dragons';
+import Login from './login';
 
 export default combineReducers({
-	Dragons
+	Login
 })
