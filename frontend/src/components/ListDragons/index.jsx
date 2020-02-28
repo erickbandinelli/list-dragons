@@ -12,7 +12,7 @@ const ListDragons = () => {
 
 	useEffect(() => {
 		dispatch(loadRequest());
-	}, []);
+	}, [dispatch]);
 
 
 	const deleteDragon = (id) => {

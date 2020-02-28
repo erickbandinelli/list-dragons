@@ -48,7 +48,7 @@ const Login = () => {
 						})}
 						placeholder="Digite sua senha" />
 
-						<button type="submit">Enviar</button>
+						<button type="submit">Entrar</button>
 				</form>
 			</div>
 		</LoginStyle>

@@ -12,7 +12,7 @@ const DetailsDragons = () => {
 
 	useEffect(() => {
 		dispatch(loadRequestDetails(id));
-	}, []);
+	}, [dispatch]);
 
 	const detailsState = useSelector(
 		(state) => state.Details.data

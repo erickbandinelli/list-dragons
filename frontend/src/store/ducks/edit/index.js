@@ -8,32 +8,35 @@ const INITIAL_STATE = {
 
 const reducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case 'LOAD_REQUEST':
+		case 'EDIT_REQUEST':
 			return {
 				...state,
 				loading: true
 			};
-		case 'LOAD_SUCCCES':
-			if (action.payload.status === "success") {
-				localStorage.setItem('jwt', action.payload.data.token);
-				window.location.href = "list-dragons";
-				return {
-					...state,
-					loading: false,
-					error: false,
-					data: action.payload
-				};
+		case 'EDIT_SUCCCES':
+			if (action.payload.status == 200) {
+				Swal.fire({
+					position: 'top-end',
+					icon: 'success',
+					title: 'Dragão alterado com sucesso',
+					showConfirmButton: false,
+					timer: 2500
+				});
+
+				window.location.href = "http://localhost:3000/list-dragons";
+
 			} else {
 				Swal.fire({
 					position: 'top-end',
 					icon: 'error',
-					title: action.payload.message,
+					title: 'Houve algum erro, tenet novamente mais tarde.',
 					showConfirmButton: false,
 					timer: 2500
 				})
 			}
+
 			break;
-		case 'LOAD_FAILURE':
+		case 'EDIT_FAILURE':
 			return {
 				...state,
 				loading: false,
