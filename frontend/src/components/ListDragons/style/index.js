@@ -17,6 +17,10 @@ const ListDragonsStyle = styled.section`
 
 		@media screen and (max-width: 700px) {
 			min-height: 100%;
+			background-size: cover;
+			background-attachment: inherit;
+			height: auto;
+			position: fixed;
 		}
 
 		&:after {
@@ -44,6 +48,7 @@ const ListDragonsStyle = styled.section`
 
 		@media screen and (max-width: 700px) {
 			width: 90%;
+			overflow-X: scroll;
 		}
 
 		.table {
@@ -97,6 +102,10 @@ const ListDragonsStyle = styled.section`
 
 					span {
 						padding-right: 6px;
+
+						@media screen and (max-width: 700px) {
+							display: none;
+						}
 					}
 
 					&:hover {

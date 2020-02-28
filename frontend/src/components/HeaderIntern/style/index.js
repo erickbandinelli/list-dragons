@@ -30,6 +30,15 @@ const HeaderInternStyle = styled.header`
 		width: 80%;
     display: flex;
 		justify-content: flex-end;
+
+		@media screen and (max-width: 700px) {
+			position: fixed;
+			height: 100%;
+			background-color: #da1a28;
+			z-index: 99;
+			width: 100%;
+			left: -411px;
+		}
 		
 		ul {
 			display: flex;

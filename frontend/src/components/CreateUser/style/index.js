@@ -17,6 +17,10 @@ const CreateDragonsStyle = styled.section`
 
 		@media screen and (max-width: 700px) {
 			min-height: 100%;
+			background-size: cover;
+			background-attachment: inherit;
+			height: auto;
+			position: fixed;
 		}
 
 		&:after {
