@@ -4,6 +4,7 @@ import { FiEye, FiTrash2, FiEdit } from "react-icons/fi";
 import { useSelector, useDispatch } from 'react-redux';
 
 import { loadRequest } from '../../store/ducks/dragons/actions';
+import { deleteRequest } from '../../store/ducks/delete/actions';
 import ListDragonsStyle from './style';
 
 const ListDragons = () => {
@@ -26,7 +27,7 @@ const ListDragons = () => {
 			cancelButtonText: 'Não, cancelar!'
 		}).then((result) => {
 			if (result.value) {
-				// dispatch(deleteRequest());
+				dispatch(deleteRequest(id));
 			}
 		})
 	}

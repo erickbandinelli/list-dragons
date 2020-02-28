@@ -63,6 +63,8 @@ const EditDragonsStyle = styled.section`
 				border: 1px solid #d8d8d8;
 				padding: 0 0 0 15px;
 				background-color: transparent;
+				font-family: 'Montserrat',sans-serif;
+				font-weight: 100;
 				font-size: 15px;
 				color: #000;
 				outline: none;
@@ -79,6 +81,8 @@ const EditDragonsStyle = styled.section`
 				height: 200px;
 				margin: 0 0 15px 0;
 				border: 1px solid #d8d8d8;
+				font-family: 'Montserrat',sans-serif;
+				font-weight: 100;
 				padding: 15px 0 0 15px;
 				background-color: transparent;
 				font-size: 15px;

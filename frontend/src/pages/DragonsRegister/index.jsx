@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../../components/Header';
-import Login from '../../components/Login';
+import CreateDragons from '../../components/CreateDragons';
 
-export default function Home() {
+export default function DragonsRegister() {
   return (
     <React.Fragment>
       <Header />
-      <Login />
+      <CreateDragons />
     </React.Fragment>
   );
 };

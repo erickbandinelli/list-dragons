@@ -4,7 +4,6 @@ import { api } from '../../../services/api';
 import { editSuccces, editFailure } from './actions';
 
 export function* editDragons(action) {
-	console.log(action.payload.id);
 	try {
 		const response = yield call(api.put, `/dragon/${action.payload.id}`, action.payload.formData);
 		yield put(editSuccces(response));

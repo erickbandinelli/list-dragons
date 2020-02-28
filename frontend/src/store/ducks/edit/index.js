@@ -14,7 +14,7 @@ const reducer = (state = INITIAL_STATE, action) => {
 				loading: true
 			};
 		case 'EDIT_SUCCCES':
-			if (action.payload.status == 200) {
+			if (action.payload.status === 200) {
 				Swal.fire({
 					position: 'top-end',
 					icon: 'success',
