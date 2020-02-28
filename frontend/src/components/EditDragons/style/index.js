@@ -31,8 +31,8 @@ const EditDragonsStyle = styled.section`
 	}	
 
 	.form-login {
-		width: 30%;
-    top: 50%;
+		width: 60%;
+    top: 40%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -30%);
@@ -57,7 +57,7 @@ const EditDragonsStyle = styled.section`
 		
 		form {
 			input {
-				width: 100%;
+				width: 48%;
 				height: 60px;
 				margin: 0 0 15px 0;
 				border: 1px solid #d8d8d8;
@@ -68,6 +68,20 @@ const EditDragonsStyle = styled.section`
 				font-size: 15px;
 				color: #000;
 				outline: none;
+
+				@media screen and (max-width: 700px) {
+					width: 100%;
+				}
+
+				&:nth-child(2){
+					margin: 0 0 15px 15px;
+					width: 50%;
+
+					@media screen and (max-width: 700px) {
+						margin: 0 0 15px 0;
+						width: 100%;
+					}
+				}
 
 				&.input-error {
 					border: 1px solid #da1a28;

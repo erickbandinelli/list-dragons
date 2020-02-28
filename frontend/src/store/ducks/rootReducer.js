@@ -6,6 +6,7 @@ import Details from './details';
 import Edit from './edit';
 import Create from './create';
 import Delete from './delete';
+import CreateUser from './createUser';
 
 export default combineReducers({
 	Login,
@@ -13,5 +14,6 @@ export default combineReducers({
 	Details,
 	Edit,
 	Create,
-	Delete
+	Delete,
+	CreateUser
 })

@@ -4,6 +4,7 @@ import { loadDragons } from './dragons/sagas';
 import { loadDetails } from './details/sagas';
 import { editDragons } from './edit/sagas';
 import { createDragons } from './create/sagas';
+import { createUser } from './createUser/sagas';
 import { deleteDragons } from './delete/sagas';
 
 export default function* rootSaga() {
@@ -13,6 +14,7 @@ export default function* rootSaga() {
 		takeLatest('LOAD_REQUEST_DETAILS_DRAGONS', loadDetails),
 		takeLatest('EDIT_REQUEST', editDragons),
 		takeLatest('CREATE_REQUEST', createDragons),
-		takeLatest('DELETE_REQUEST', deleteDragons)
+		takeLatest('DELETE_REQUEST', deleteDragons),
+		takeLatest('CREATE_USER_REQUEST', createUser)
 	])
 }

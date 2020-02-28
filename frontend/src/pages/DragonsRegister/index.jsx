@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../components/Header';
+import HeaderIntern from '../../components/HeaderIntern';
 import CreateDragons from '../../components/CreateDragons';
 
 export default function DragonsRegister() {
   return (
     <React.Fragment>
-      <Header />
+      <HeaderIntern />
       <CreateDragons />
     </React.Fragment>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../components/Header';
+import HeaderIntern from '../../components/HeaderIntern';
 import EditDragons from '../../components/EditDragons';
 
 export default function DragonsEdit() {
   return (
     <React.Fragment>
-      <Header />
+      <HeaderIntern />
       <EditDragons />
     </React.Fragment>
   );
