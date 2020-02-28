@@ -84,6 +84,33 @@ const LoginStyle = styled.section`
 				letter-spacing: 1px;
 				color: #fff;
 				cursor: pointer;
+
+				&:hover {
+					background-color: #af1420;
+					border: 1px solid #af1420;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+
+			a {
+				width: 100%;
+				background-color: #307096;
+				border: 1px solid #307096;
+				padding: 15px 0;
+				font-size: 15px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #fff;
+				cursor: pointer;
+				display: block;
+				text-align: center;
+				margin: 19px 0 0 0;
+
+				&:hover {
+					color: #307096;
+					background-color: #fff;
+					transition: all 0.2s ease-in-out;
+				}
 			}
 		}
 	}

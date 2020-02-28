@@ -120,6 +120,12 @@ const CreateDragonsStyle = styled.section`
 				letter-spacing: 1px;
 				color: #fff;
 				cursor: pointer;
+
+				&:hover {
+					background-color: #af1420;
+					border: 1px solid #af1420;
+					transition: all 0.2s ease-in-out;
+				}
 			}
 		}
 	}

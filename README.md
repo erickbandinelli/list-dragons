@@ -1,5 +1,6 @@
 #### MUITO IMPORTANTE !!!
--  Para cadastrar usuario acesse usando  - "http://localhost:4000/api/register"
+-  Executar dentro de backend no terminal "yarn dev"
+-  Executar dentro de frontend no terminal "yarn start"
 
 #### Estou usando as seguintes tecnologias - Leia a Documentação
 

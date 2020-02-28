@@ -49,6 +49,8 @@ const Login = () => {
 						placeholder="Digite sua senha" />
 
 						<button type="submit">Entrar</button>
+
+						<a href="/register">Cadastrar usuário</a>
 				</form>
 			</div>
 		</LoginStyle>

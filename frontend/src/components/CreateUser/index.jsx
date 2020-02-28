@@ -42,6 +42,7 @@ const CreateUser = () => {
 						className={errors.password && 'input-error'}
 						type="password"
 						name="password"
+						style={{width: '100%'}}
 						ref={register({ 
 							required: true
 						})}
