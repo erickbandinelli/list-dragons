@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import { FiEye, FiTrash2, FiEdit } from "react-icons/fi";
 import { useSelector, useDispatch } from 'react-redux';
 
+import Pagination from "../../components/Pagination";
 import { loadRequest } from '../../store/ducks/dragons/actions';
 import { deleteRequest } from '../../store/ducks/delete/actions';
 import ListDragonsStyle from './style';
 
 const ListDragons = () => {
+	const [currentPage, setCurrentPage] = useState(1);
+	const [dragonsPerPage] = useState(4);
 
 	const dispatch = useDispatch();
 
@@ -35,6 +38,11 @@ const ListDragons = () => {
 	const dragonsState = useSelector(
 		(state) => state.Dragons.data
 	);
+
+
+	const paginate = (pageNumber) => setCurrentPage(pageNumber);
+	const indexOfLastDragons = currentPage * dragonsPerPage;
+	const indexOfFirstDragons = indexOfLastDragons - dragonsPerPage;
 	
 	const newListDragons = dragonsState.sort(function (a, b) {
 		var nameA = a.name, nameB = b.name
@@ -44,6 +52,8 @@ const ListDragons = () => {
 				return 1
 		return 0 
  });
+
+ const currentDragons = newListDragons.slice(indexOfFirstDragons, indexOfLastDragons);
 
 	return (
 		<ListDragonsStyle>
@@ -60,7 +70,7 @@ const ListDragons = () => {
 					</thead>
 					<tbody>
 						{
-							newListDragons.sort((a, b) => a.name < b.name).map((item, key) => {
+							currentDragons.sort((a, b) => a.name < b.name).map((item, key) => {
 								return (
 									<tr key={key}>
 										<td>{item.name}</td>
@@ -75,6 +85,13 @@ const ListDragons = () => {
 					</tbody>
 				</table>
 			</div>
+
+			<Pagination
+				currentPage={currentPage}
+				dragonsPerPage={dragonsPerPage}
+				totalDragons={dragonsState.length}
+				paginate={paginate} />
+
 		</ListDragonsStyle>
 	);
 }

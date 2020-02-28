@@ -32,10 +32,10 @@ const ListDragonsStyle = styled.section`
 
 	.box-card {
 		width: 80%;
-    top: 30%;
+    margin: 95px 0 0 0;
     left: 50%;
-    position: absolute;
-    transform: translate(-50%, -30%);
+    position: relative;
+    transform: translateX(-50%);
     background-color: #ffffff;
     padding: 0;
     border-radius: 10px;
